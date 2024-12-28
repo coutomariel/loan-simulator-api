@@ -1,0 +1,12 @@
+spring:
+  flyway:
+    enabled: false  # Habilita o Flyway
+  datasource:
+    url: jdbc:h2:mem:loan_simulator_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE  # Banco H2 em memória
+    driver-class-name: org.h2.Driver
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties: {}

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name=loansimulator-api
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/loan_simulator_db}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties: {}
+  flyway:
+    enabled: true
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/loan_simulator_db}
+    user: ${DB_USER:root}
+    password: ${DB_PASSWORD:root}
+    locations: classpath:db/migration
+
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path=/swagger-ui.html
